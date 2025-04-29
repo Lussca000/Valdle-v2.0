@@ -1,0 +1,187 @@
+@import url('https://fonts.cdnfonts.com/css/valorant');
+
+
+
+.fundo {
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  z-index: -1; 
+  background-image: url('imagens/fundo.jpg');
+}
+
+/* Estilos gerais */
+
+* > h1 {
+    font-family: 'VALORANT';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f1923;
+    color: #ece8e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Fundo estilizado */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #1f2731 0%, #0f1923 70%);
+    z-index: -1;
+}
+
+/* Estilo do conteúdo principal */
+.conteudo {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Estilo da caixa do quiz */
+.box {
+    background-color: #1f2731;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título principal */
+h1 {
+    color: #ff4655;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Imagem do agente */
+#agente-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: 20px 0;
+    background-color: #0f1923;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #364966;
+}
+
+.resposta-container {
+    position: relative;
+    width: 100%;
+}
+
+.sugestoes {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #1c1c1c;
+    border: 0px solid #444;
+    z-index: 1000;
+    max-height: 150px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
+
+.sugestao-opcao {
+    cursor: pointer;
+    padding: 6px 10px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+.sugestao-opcao:hover, .sugestao-opcao.selecionado {
+    background-color: #444;
+}
+
+.sugestao-opcao.highlight {
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* Campo de entrada */
+#resposta {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    border: 1px solid #364966;
+    background-color: #0f1923;
+    color: #ece8e1;
+    font-size: 16px;
+    outline: none;
+}
+
+#resposta:focus {
+    border-color: #ff4655;
+}
+
+/* Botão de verificar resposta */
+#verificar {
+    background-color: #ff4655;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+#verificar:hover {
+    background-color: #e43f4d;
+}
+
+#verificar:disabled {
+    background-color: #6e3d42;
+    cursor: not-allowed;
+}
+
+/* Feedback para o usuário */
+#feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    min-height: 30px;
+    text-align: center;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    .box {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    #agente-img {
+        width: 120px;
+        height: 120px;
+    }
+}

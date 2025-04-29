@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valdle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fundo"></div>
+    <div class="conteudo">
+        <div class="box">
+            <h1>Valdle v2.0</h1>
+            <img src="../projeto valdle github/imagens/fundo.jpg" id="agente-img" alt="Personagem">
+            <img id="habilidade-img" src="" alt="habilidade" style="display:none; width:100px;" />
+            <div class="resposta-container">
+                <input type="text" id="resposta" placeholder="Digite o nome do agente:">
+                <div id="sugestoes" class="sugestoes"></div>
+            </div>
+                <button id="verificar" onclick="verificarResposta(event)">Responder</button>
+                <p id="feedback"></p>
+                <p id="msg-erro" style="color:red"></p>
+                <span id="acertos"></span>
+                <span id="erros"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
